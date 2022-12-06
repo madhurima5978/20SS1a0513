@@ -1,0 +1,186 @@
+<html>
+	<style>
+	#box{
+		height:100px;
+		width:100px;
+		background-color:blue;
+		padding:30px;
+		margin:50px;
+		margin-left:0;
+	}
+</style>
+	<body>
+		<h1 id="heading">HELLO</h1>
+		<div id="box">hey</div>
+		<button onclick="madhu()">color</button>
+		<button onclick="boxcolor()">box</button>
+		<button onclick="prime()">prime</button>
+		<button onclick="vote()">Vote</button>
+		<button onmouseover="site()">Google</button>
+		<button onclick="myStopFunction()">pop</button>
+		<h1 id="p">Attack on Titan</h1>
+	</body>
+
+	<script>
+		var a="Hello world!";
+		alert(a);
+		var b = prompt("Enter a value");
+		var c=parseInt(b);
+		alert(c*c);
+		document.getElementById("heading").style.color="red";
+		function madhu()
+		{
+			var mad = parseInt(prompt("Enter your choice"));
+			if(mad == 1)
+			{
+				document.getElementById("heading").style.color="blue";
+			}
+			else if(mad == 2)
+			{
+				document.getElementById("heading").style.color="green";
+			}
+			else if(mad == 3)
+			{
+				document.getElementById("heading").style.color="yellow";
+			}
+			else if(mad == 4)
+			{
+				document.getElementById("heading").style.color="brown";
+			}
+			else
+			{
+				alert("Invalid");
+				madhu();
+			}
+		}
+		function boxcolor()
+		{
+			var s = parseInt(prompt("Enter a number"));
+			switch(s)
+			{
+				case 1:
+					document.getElementById("box").style.transform="scale(1.2)";
+					break;
+				case 2:
+					document.getElementById("box").style.transform="scale(1)";
+					break;
+				case 3:
+					document.getElementById("box").style.backgroundColor="green";
+					break;
+				default:
+					alert("Invalid");
+					boxcolor();
+					
+			}
+		}
+		function prime()
+		{
+			
+			for( let i=1;i<=50;i++)
+			{
+				var c=0;
+				for(let j=2;j<=i/2;j++)
+				{
+					if(i%j==0)
+					{
+						c++;
+					}
+				}
+				if(c==0)
+				{
+					document.write(i+" ");
+				}
+			}
+		}
+		function vote()
+		{
+			var age = parseInt(prompt("Enter age"));
+			if(age>18)
+			{
+				alert("Eligible to vote");
+			}
+			else
+			{
+				alert("Not eligible to vote");
+			}
+		}
+		function obj()
+		{
+			var stud = new Object();
+			stud.id=13;
+			stud.name="madhu";
+			stud.fee=50000;
+			document.write(stud.id+" "+stud.name+" "+stud.fee);
+		}
+		obj();
+		function arr()
+		{
+			var emp = ["madhu","kavya","likki"];
+			for(i=0;i<emp.length;i++)
+			{
+				document.write("<br>"+emp[i]);
+			}
+		}
+		arr();
+		function str()
+		{
+			document.write("<br>");
+			var str1 = "Jntuh ";
+			var str2 = "College of Engineering sulthanpur";
+			var str3 = str1.concat(str2);
+			document.write(str3);
+			document.write("<br>"+str3.indexOf("of"));
+			var str4 = str3.slice(5,15);
+			document.write("<br>"+str4);
+			var str5 = "    Madhurima    ";
+			document.write("<br>"+str5);
+			document.write("<br>"+str5.trim());
+			document.write("<br>"+str3.split(" "));
+		}
+		str();
+		function site()
+		{
+			open("https://www.google.com");
+		}
+		
+		function popin()
+		{
+			alert("Heyyy");
+			
+		}
+		const myTimeout = setInterval(cruel,2000);
+		function myStopFunction()
+		{
+			clearTimeout(myTimeout);
+		}
+		function cruel()
+		{
+			if(document.getElementById("p").innerHTML == "Attack on Titan")
+			{
+				document.getElementById("p").innerHTML = "Give up on your dreams and die";
+				document.getElementById("p").style.backgroundColor="blue";
+			}
+			else if(document.getElementById("p").innerHTML == "Give up on your dreams and die")
+			{
+				document.getElementById("p").innerHTML = "Never gonna give you up";
+				document.getElementById("p").style.backgroundColor="green";
+			}
+			else if(document.getElementById("p").innerHTML == "Never gonna give you up")
+			{
+				document.getElementById("p").innerHTML = "Never gonna let you down";
+				document.getElementById("p").style.backgroundColor="blue";
+			}
+			else if(document.getElementById("p").innerHTML == "Never gonna let you down")
+			{
+				document.getElementById("p").innerHTML = "Never gonna Run around and desert you";
+				document.getElementById("p").style.backgroundColor="green";
+			}
+			else if(document.getElementById("p").innerHTML == "Never gonna Run around and desert you")
+			{
+				document.getElementById("p").innerHTML = "Attack on Titan";
+				document.getElementById("p").style.backgroundColor="blue";
+			}
+		}
+	</script>
+	
+</html>

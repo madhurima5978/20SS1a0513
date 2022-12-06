@@ -1,0 +1,528 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    
+}
+.btn{
+    margin: auto;
+    position: relative;
+    margin-top: 20px;
+    width: 100px;
+    right: -50px;
+}
+.bottom
+{
+    position: absolute;
+    top:1000px;
+}
+.cards{ 
+    padding: 10px;
+    margin: auto;
+    margin-left: 200px;  
+}
+.card-img  :hover{
+    opacity: 50%;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+    box-shadow: 2px 2px 5px black; 
+    /*when hovered gives zoom effect*/
+    
+}
+.card-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     width: 50%;
+}
+
+.clubs{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(29, 29, 29, 0.7),rgb(255, 255, 255));
+}
+.clubs h1{
+    text-align: center;
+    padding: 20px;
+}
+.clubs p{
+    text-align: center;
+}
+.def{
+    background-color: #06064a;
+    width: 101%;
+    height: 300px;
+    overflow: auto;
+    color: #ffffff;
+    max-height: 100%;
+}
+.def .clubsdef{
+    max-height: 100%;
+    max-width: 100%;
+    margin-left: 150px;
+    z-index: 1;
+}
+.def p{
+   padding: 20px; 
+   margin-left: 30px;
+}
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #a18cd1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+#event{
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    background-color: #06064a;
+    z-index: -1;
+    animation: fade-in 1000ms ease-in forwards;
+}
+#event a{
+    text-decoration: none;
+}
+#event video{
+    min-width: 150;
+    height: 500px;
+    z-index: -1;
+    position: absolute;
+    animation: fade-in1 3000ms ease-in forwards;
+
+    /*the overlay video at the top*/
+}
+#event h1{
+    position: relative;
+    float: initial;
+    padding-top: 50px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: white;
+    z-index: 2;
+    
+}
+#event .eventpic{
+    position: relative;
+    right: -880px;
+    top: -153px;
+    height: 100%;
+    z-index: 2;
+    /*gotta make this responsive*/
+}
+#eventcontent2{
+    animation: blur 4s linear infinite;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+#eventContent1{
+    animation: blur1 4s linear infinite;
+    animation-fill-mode: forwards;
+    display: none;
+    z-index: 2;
+}
+
+#event button{
+    background: none;
+    border: none;
+    color: white;
+    margin: 30px;
+    position: relative;
+    top: -300px;
+    z-index: 2;
+}
+#event button:focus{
+    outline: none;
+}
+#event button::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    /*the underline of the buttons when hovered*/
+}
+#event button:hover::after{
+    width: 100%;
+}
+#eventContent2:active #event #b1{
+    width: 100%;
+}
+#eventContent1:active #event #b2P{
+    width: 100%;
+}
+.footer{
+    background-image: linear-gradient(rgb(161, 161, 161),rgba(255, 255, 255, 0.782));
+    width: 100%;
+    height: 600px;
+    color: rgb(0, 131, 246);
+    padding: 20px;  
+    z-index: 2;
+    /*bottom of the page*/
+}
+.footer p{
+    float: right;
+    font-size: 20px;
+}
+.footer p span{
+    font-size: 30px;
+}
+.form-group{
+    width: 80%;
+    padding: 30px;
+    margin-top: 30px;
+}
+.header{
+    min-height: 150vh;
+    width: 100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%),url("/images/bg.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /*background of the page*/
+}
+.jntu{
+    position: relative;
+    left: 0px;
+}
+.jntuhces
+{
+   position: absolute;
+   right: 100px; 
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    /*club cards styling*/
+}
+.layer .cName{
+    
+    transition: 0.5s;
+    margin-top: 150px;
+    opacity: 0;
+    color: rgb(0, 0, 0);
+    transform: translateY(500%);
+
+}
+
+.layer:hover .cName{
+    
+    animation: cName-anim 300ms ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    
+}
+
+
+.layer:hover{
+    background: rgba(59, 141, 255, 0.7);
+    transform: translateY(1);
+    
+}
+.layer :hover p{
+    
+    opacity: 1;
+}
+.nav-item{
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5px 8px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.2s;
+}
+.nav-item:hover
+{
+    transform: scale(1.1);
+    background-color: rgb(135, 181, 255);
+    
+}
+.navbar{
+    animation: nav-anim 300ms ease-in ;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px;
+}
+.navbar dropdown-toggle{
+    padding: 20px;
+    
+}
+.openbtn{
+    float: left;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+}
+.row .card{
+    margin: 20px;
+}
+.sidepanel{
+    height: 25px;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding: 60px;
+    transition: 0.5s;
+    background-color: #06064a;
+}
+.sidepanel a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    display: block;
+}
+.sidepanel .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+    font-size: 36px;
+}
+.openbtn{
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.signin{
+    background-image: linear-gradient(rgba(255, 0, 217, 0.5),rgba(255, 255, 0, 0.5));
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    height: 300px;
+    margin-top: 100px;
+    border-radius: 5%;
+
+}
+#sign-head
+{
+    padding: 20px;
+    background-image: linear-gradient(rgba(255, 0, 217, 0.5),rgba(255, 255, 0, 0.5));
+    width: 15%;
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    right: 510px;
+    top: 140px;  
+}
+.sign-head a:hover{
+    text-decoration: none;
+}
+.s-Layout{
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    background-size: cover;
+}
+.techno{
+    width: 100%;
+    background-image: linear-gradient(rgba(7, 105, 251, 0.5),rgb(255, 255, 255));
+    height: 300px;
+}
+.tIntro{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.tIntro img{
+
+    height: 300px;
+    width: 300px;
+    /*clubs seperate page styling*/
+}
+.white{
+    background-color: rgb(248, 253, 226);
+    height: 200px;
+    width: 100%;
+    
+}
+.white h1{
+    padding: 50px;
+    padding-left: 200px;
+    color: rgb(59, 167, 255);
+}
+@keyframes blur{
+    90%{
+        filter: blur(0px);
+        display: block;
+    }
+    100%{
+        filter:blur(8px);
+        display: none;
+    }
+}
+@keyframes blur1{
+    0%{
+        filter: blur(8px);
+        display: block;
+    }
+    10%{
+        filter: blur(0);
+    }
+}
+@keyframes fade-in1 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.7;
+    }
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+@keyframes cName-anim {
+    
+    0%{
+        
+        opacity: 0;
+        transform: scale(0);
+        transform: translateY(500%);
+    }
+    
+
+    100%{
+        transform: translateY(0);
+        transform: scale(1);
+    }
+}
+@keyframes nav-anim{
+
+    0%{
+        transform: translateY(-100%);
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+@media(max-width: 900px){
+
+    .cards{
+        margin-left: 0;
+    }
+    .def .clubsdef{
+        margin-left: 0;
+    }
+    #event{
+        display: block;
+    }
+    .eventpic{
+        display: none;
+    }
+    .intro{
+        opacity: 0;
+    }
+    .navbar{
+        z-index: 2;
+    }
+    .row{
+        margin:0;
+    }
+    .row .card{
+        margin: 2px;
+    }
+    .signin{
+        width: 80%;
+    }
+    .white h1{
+        font-size: 25px;
+        padding-left: 0;
+    }
+}
+
+
+
+/*
+ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0; 
+   overflow: hidden;
+   background-color: #C2DED1;
+}
+li{
+    float: left;
+}
+
+li a:hover{
+    background-color: azure;
+}
+.topnav
+{
+    background-color: rgb(120, 156, 255);
+    overflow: hidden;
+}
+.topnav a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+.topnav a:hover{
+    background-color: black;
+    transform: scale(1.2);
+}
+.log
+{
+    float: right;
+    background-color: cornsilk;
+}
+.topnav a.active{
+    background-color: #82daba;
+}
+.topnav .icon{
+    display: none;
+}
+*/
